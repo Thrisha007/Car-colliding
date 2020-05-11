@@ -12,6 +12,9 @@ function setup() {
 
   speed = random(55,90);
   weight = random (400,1500);
+
+  
+  car.velocityX = speed;
 }
 
 function draw() {
@@ -23,19 +26,18 @@ function draw() {
     var deformation = (0.5*weight*speed*speed)/22500;
 
   if(deformation<100){
-       car.shapeColor = (0,255,0);
+       car.shapeColor = color(0,255,0);
   }
 
   if(deformation<180 && deofrmation>100){
-     car.shapeColor = (230,230,0);
+     car.shapeColor = color(230,230,0);
   }
 
   if(deformation>180){
-    car.shapeColor = (255,0,0);
+    car.shapeColor = color(255,0,0);
   }
 
 }
-  car.velocityX = speed;
 
   drawSprites();
 }
